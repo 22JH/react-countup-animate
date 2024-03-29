@@ -25,7 +25,10 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
-        extensions: [".css", ".scss"], // 처리할 파일 확장자
+        extensions: [".css", ".scss"],
+        minimize: true,
+        sourceMap: true,
+        modules: true,
       }),
     ],
   },
@@ -33,5 +36,6 @@ export default [
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
+    external: ["react", "react-dom", /\.css$/],
   },
 ];
