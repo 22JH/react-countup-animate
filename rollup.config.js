@@ -2,8 +2,8 @@ import commonjs from "@rollup/plugin-commonjs";
 import reslove from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
-
-const packageJson = require("./package.json");
+import packageJson from "./package.json" assert { type: "json" };
+import postcss from "rollup-plugin-postcss";
 
 export default [
   {
@@ -17,13 +17,16 @@ export default [
       {
         file: packageJson.module,
         format: "esm",
-        soucemap: true,
+        sourcemap: true,
       },
     ],
     plugins: [
       reslove(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
+      postcss({
+        extensions: [".css", ".scss"], // 처리할 파일 확장자
+      }),
     ],
   },
   {

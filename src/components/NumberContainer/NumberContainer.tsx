@@ -1,6 +1,6 @@
 import React from "react";
-import NumberResult from "../NumberResult";
-import NumberLoading from "../NumberLoading";
+import { NumberResult } from "../NumberResult/index";
+import { NumberLoading } from "../NumberLoading/index";
 import styles from "./NumberContainer.module.css";
 import { CSSProperties, useEffect, useState } from "react";
 
