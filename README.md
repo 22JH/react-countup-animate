@@ -1,12 +1,10 @@
 # react-countup-animate
 
----
 
 **Less dependencies** and **less sizes** and **easy to use**
 
 # Demo
 
----
 
 <img src="https://velog.velcdn.com/images/toitoii080/post/be05ab8c-34e2-440f-85fd-ecf6129db938/image.gif" width="50%" height="50%"/>
 
@@ -14,7 +12,6 @@ Click [here](https://stackblitz.com/edit/vitejs-vite-rcrxpi?file=src%2FApp.tsx,s
 
 # How to use
 
----
 
 **Installation**
 
