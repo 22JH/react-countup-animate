@@ -22,3 +22,4 @@ tsconfig.json
 .prettierrc
 rollup.config.js
 rollup.min.config.js
+docs

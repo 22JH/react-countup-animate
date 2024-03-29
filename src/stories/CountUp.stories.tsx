@@ -1,20 +1,22 @@
 import CountUpComponent from "..";
-import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-export default {
+const meta: Meta<typeof CountUpComponent> = {
   title: "CountUp",
   component: CountUpComponent,
   argTypes: {
-    number: { control: "number" }, // 'number' 타입의 컨트롤을 추가합니다.
-    startDelay: { control: "number" }, // 'number' 타입의 컨트롤을 추가합니다.
-    endDelay: { control: "number" }, // 'number' 타입의 컨트롤을 추가합니다.
-    reverse: { control: "boolean" }, // 'number' 타입의 컨트롤을 추가합니다.
+    number: { control: "number" },
+    startDelay: { control: "number" },
+    endDelay: { control: "number" },
+    reverse: { control: "boolean" },
   },
 };
+export default meta;
 
-const Template = (args) => <CountUpComponent {...args} />;
+type Story = StoryObj<typeof CountUpComponent>;
 
-export const CountUpComp = Template.bind({});
-CountUpComp.args = {
-  number: 1234, // 기본값 설정
+export const a: Story = {
+  args: {
+    number: 1234,
+  },
 };
