@@ -1,0 +1,20 @@
+@keyframes count-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-91.4%);
+  }
+}
+
+.numberFrame {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+
+  animation: count-up 1500ms cubic-bezier(0, 0, 0, 1) forwards;
+}
+
+.numberStyle {
+  margin: 0;
+}

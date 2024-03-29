@@ -1,0 +1,25 @@
+{
+  "name": "react-countup-animate",
+  "version": "1.0.0",
+  "description": "react count up animation",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/dinex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "22/JH",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.73",
+    "rollup": "^4.13.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "typescript": "^5.4.3"
+  }
+}
