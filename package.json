@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
-    "storybook": "storybook dev -p 6006",
+    "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest --watchAll --verbose"
   },

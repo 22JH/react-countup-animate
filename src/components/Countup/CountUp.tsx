@@ -7,15 +7,23 @@ export default function Countup({
   number = "1,234,567",
   style = { fontSize: "50px" },
   duration = 3,
-  delay = 0.15,
+  startDelay = 0.15,
+  endDelay = 0.1,
   reverse = false,
 }: AppProps) {
   const numberToString = number.toString().split("");
-  const delaysArr = Array.from(Array(numberToString.length), (_, idx) => {
+  const startDelaysArr = Array.from(Array(numberToString.length), (_, idx) => {
     if (!reverse) {
-      return idx * delay;
+      return idx * startDelay;
     } else {
-      return (numberToString.length - idx - 1) * delay;
+      return (numberToString.length - idx - 1) * startDelay;
+    }
+  });
+  const endDelaysArr = Array.from(Array(numberToString.length), (_, idx) => {
+    if (!reverse) {
+      return idx * endDelay;
+    } else {
+      return (numberToString.length - idx - 1) * endDelay;
     }
   });
   return (
@@ -25,7 +33,8 @@ export default function Countup({
           <NumberContainer
             key={idx}
             number={num}
-            delay={delaysArr[idx]}
+            startDelay={startDelaysArr[idx]}
+            endDelay={endDelaysArr[idx]}
             duration={duration}
             style={style}
           />

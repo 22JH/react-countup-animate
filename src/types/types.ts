@@ -4,8 +4,9 @@ export interface AppProps {
   number: number | string;
   style?: CSSProperties;
   duration?: number;
-  delay?: number;
   reverse?: boolean;
+  startDelay?: number;
+  endDelay?: number;
 }
 
 export interface NumbersProps {}

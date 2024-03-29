@@ -6,16 +6,18 @@ import { CSSProperties, useEffect, useState } from "react";
 
 export interface NumberToStinrgType {
   number: string;
-  delay: number;
   style: CSSProperties;
   duration: number;
+  startDelay: number;
+  endDelay: number;
 }
 
 export default function NumberContainer({
   number,
-  delay,
   style,
   duration,
+  endDelay,
+  startDelay,
 }: NumberToStinrgType) {
   const [isTimeUp, setIsTimeUp] = useState<boolean>(false);
 
@@ -24,7 +26,7 @@ export default function NumberContainer({
       () => {
         setIsTimeUp(true);
       },
-      (duration + delay) * 1000
+      (duration + endDelay) * 1000
     );
 
     return () => clearTimeout(timer);
@@ -34,7 +36,7 @@ export default function NumberContainer({
     return (
       <div
         className={styles.numberContainerFrame}
-        style={{ animationDelay: `${delay}s` }}>
+        style={{ animationDelay: `${startDelay}s` }}>
         <span style={style}>{number}</span>
       </div>
     );
@@ -43,11 +45,11 @@ export default function NumberContainer({
   return (
     <div
       className={styles.numberContainerFrame}
-      style={{ animationDelay: `${delay}s` }}>
+      style={{ animationDelay: `${startDelay}s` }}>
       {isTimeUp ? (
         <NumberResult number={number} style={style} />
       ) : (
-        <NumberLoading delay={delay} style={style} />
+        <NumberLoading delay={startDelay} style={style} />
       )}
     </div>
   );
