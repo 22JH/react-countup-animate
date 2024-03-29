@@ -6,8 +6,8 @@ const meta: Meta<typeof CountUpComponent> = {
   component: CountUpComponent,
   argTypes: {
     number: { control: "number" },
-    startDelay: { control: "number" },
-    endDelay: { control: "number" },
+    startDelay: {},
+    endDelay: {},
     reverse: { control: "boolean" },
   },
 };
@@ -17,6 +17,8 @@ type Story = StoryObj<typeof CountUpComponent>;
 
 export const a: Story = {
   args: {
-    number: 1234,
+    number: "1,000,000,000,000",
+    startDelay: "ease-out",
+    endDelay: "ease-out",
   },
 };

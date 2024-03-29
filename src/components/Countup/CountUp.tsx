@@ -2,6 +2,7 @@ import React from "react";
 import NumberContainer from "../NumberContainer/NumberContainer";
 import styles from "./CountUp.module.css";
 import { AppProps } from "../../types/types";
+import { calculateDelays } from "../../utils/calculateDelays";
 
 /**
  *
@@ -23,21 +24,17 @@ export default function Countup({
   reverse = false,
   style = { fontSize: "50px" },
 }: AppProps) {
+  const startDelayValue = Math.max(duration / 3, 1);
+  const endDelayValue = Math.max(duration / 3, 1);
   const numberToString = number.toString().split("");
-  const startDelaysArr = Array.from(Array(numberToString.length), (_, idx) => {
-    if (!reverse) {
-      return idx * startDelay;
-    } else {
-      return (numberToString.length - idx - 1) * startDelay;
-    }
-  });
-  const endDelaysArr = Array.from(Array(numberToString.length), (_, idx) => {
-    if (!reverse) {
-      return idx * endDelay;
-    } else {
-      return (numberToString.length - idx - 1) * endDelay;
-    }
-  });
+  const { startDelayArr, endDelayArr } = calculateDelays(
+    numberToString,
+    startDelay,
+    endDelay,
+    reverse,
+    startDelayValue,
+    endDelayValue
+  );
   return (
     <div className={styles.mainContainer}>
       {numberToString.map((num, idx) => {
@@ -45,8 +42,8 @@ export default function Countup({
           <NumberContainer
             key={idx}
             number={num}
-            startDelay={startDelaysArr[idx]}
-            endDelay={endDelaysArr[idx]}
+            startDelay={startDelayArr[idx]}
+            endDelay={endDelayArr[idx]}
             duration={duration}
             style={style}
           />

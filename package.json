@@ -1,6 +1,6 @@
 {
   "name": "react-countup-animate",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "react countup animation UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/dinex.js",
@@ -12,6 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/22JH/react-countup-animate.git"
   },
+  "keywords": [
+    "react",
+    "react-count",
+    "react-countup",
+    "react-count-animation"
+  ],
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
