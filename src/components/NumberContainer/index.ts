@@ -1,1 +1,1 @@
-export { default as NumberContainer } from "./NumberContainer";
+export { default } from "./NumberContainer";

@@ -1,1 +1,1 @@
-export { default as NumberResult } from "./NumberResult";
+export { default } from "./NumberResult";

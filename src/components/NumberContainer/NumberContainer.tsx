@@ -1,6 +1,6 @@
 import React from "react";
-import { NumberResult } from "../NumberResult/index";
-import { NumberLoading } from "../NumberLoading/index";
+import NumberResult from "../NumberResult";
+import NumberLoading from "../NumberLoading";
 import styles from "./NumberContainer.module.css";
 import { CSSProperties, useEffect, useState } from "react";
 
@@ -20,9 +20,12 @@ export default function NumberContainer({
   const [isTimeUp, setIsTimeUp] = useState<boolean>(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsTimeUp(true);
-    }, (duration + delay) * 1000);
+    const timer = setTimeout(
+      () => {
+        setIsTimeUp(true);
+      },
+      (duration + delay) * 1000
+    );
 
     return () => clearTimeout(timer);
   }, []);

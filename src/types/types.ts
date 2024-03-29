@@ -2,10 +2,10 @@ import { CSSProperties } from "react";
 
 export interface AppProps {
   number: number | string;
-  style: CSSProperties;
+  style?: CSSProperties;
   duration: number;
-  delay: number;
-  reverse: boolean;
+  delay?: number;
+  reverse?: boolean;
 }
 
 export interface NumbersProps {}

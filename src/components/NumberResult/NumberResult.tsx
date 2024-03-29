@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import styles from "./NumberResult.module.css";
+import React from "react";
 
 interface NumberProps {
   number: string;

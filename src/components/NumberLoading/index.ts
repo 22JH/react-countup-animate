@@ -1,1 +1,1 @@
-export { default as NumberLoading } from "./NumberLoading";
+export { default } from "./NumberLoading";

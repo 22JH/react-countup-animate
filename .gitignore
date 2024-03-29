@@ -6,3 +6,4 @@ dist
 logs
 **/*.backup.*
 **/*.back.*
+*storybook.log

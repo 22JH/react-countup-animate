@@ -1,9 +1,9 @@
-import NumberContainer from "./components/NumberContainer/NumberContainer";
-import styles from "./styles/App.module.css";
-import { AppProps } from "./types/types";
 import React from "react";
+import NumberContainer from "../NumberContainer/NumberContainer";
+import styles from "./CountUp.module.css";
+import { AppProps } from "../../types/types";
 
-export default function CountUp({
+export default function Countup({
   number = "1,234,567",
   style = { fontSize: "50px" },
   duration = 3,
