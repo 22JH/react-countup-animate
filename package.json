@@ -8,6 +8,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/22JH/react-countup-animate.git"
+  },
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
