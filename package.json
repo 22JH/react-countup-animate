@@ -1,14 +1,18 @@
 {
   "name": "react-countup-animate",
   "version": "1.0.0",
-  "description": "react count up animation",
+  "description": "react countup animation UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/dinex.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "22/JH",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
