@@ -1,6 +1,6 @@
 {
   "name": "react-countup-animate",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "react countup animation UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/dinex.js",
@@ -12,7 +12,41 @@
     "dev": "rollup -c --watch",
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "jest --watchAll --verbose"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/src/test/styleMock.ts"
+    }
+  },
+  "babel": {
+    "sourceType": "unambiguous",
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "chrome": 100,
+            "safari": 15,
+            "firefox": 91
+          }
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      "@babel/preset-typescript"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-import": {}
+    }
   },
   "type": "module",
   "author": "22JH",
@@ -22,6 +56,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.1",
     "@chromatic-com/storybook": "^1.2.25",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -35,7 +72,14 @@
     "@storybook/react": "^8.0.5",
     "@storybook/react-webpack5": "^8.0.5",
     "@storybook/test": "^8.0.5",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
+    "@types/jest": "^29.5.12",
     "@types/react": "^18.2.73",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss-import": "^16.1.0",
     "rollup": "^4.13.2",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-postcss": "^4.0.2",

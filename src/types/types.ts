@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 export interface AppProps {
   number: number | string;
   style?: CSSProperties;
-  duration: number;
+  duration?: number;
   delay?: number;
   reverse?: boolean;
 }
