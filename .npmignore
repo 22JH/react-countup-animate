@@ -9,6 +9,7 @@ yarn.lock
 .idea
 .github
 stories
+test
 storybook-static
 .storybook
 cypress

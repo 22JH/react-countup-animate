@@ -23,7 +23,10 @@ export default [
     plugins: [
       reslove(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        exclude: ["**/__tests__", "**/*.test.tsx", "**/*.stories.tsx"],
+      }),
       postcss({
         extensions: [".css", ".scss"],
         minimize: true,

@@ -1,6 +1,6 @@
 {
   "name": "react-countup-animate",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "react countup animation UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/dinex.js",
@@ -82,6 +82,7 @@
     "postcss-import": "^16.1.0",
     "rollup": "^4.13.2",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-ignore-import": "^1.3.2",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.0.5",
     "tslib": "^2.6.2",
