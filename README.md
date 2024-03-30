@@ -24,7 +24,8 @@ import Countup from "react-countup-animate";
 function App() {
   return (
     <Countup number={160000} />
-	<Countup number={"160,000"} reverse={true} />
+    // <Countup number={"160,000"} reverse={true} />
+    // <Countup number={123456} startDelay={0.5} endDelay={1} reverse={true} />
   );
 }
 
