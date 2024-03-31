@@ -25,7 +25,7 @@ export default function Countup({
   easeStartDuration = Math.max(duration / 3, 1),
   easeEndDuration = Math.max(duration / 3, 1),
   reverse = false,
-  style = { fontSize: "50px" },
+  style,
 }: AppProps) {
   const numberToString = number.toString().split("");
   const { startDelayArr, endDelayArr } = calculateDelays(

@@ -4,7 +4,7 @@ import React from "react";
 
 interface NumberProps {
   number: string;
-  style: CSSProperties;
+  style: CSSProperties | undefined;
 }
 
 export default function NumberResult({ number, style }: NumberProps) {

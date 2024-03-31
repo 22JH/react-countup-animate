@@ -3,7 +3,7 @@ import { CSSProperties, useEffect, useRef } from "react";
 import styles from "./NumberLoading.module.css";
 
 interface NumberLoadingProps {
-  style: CSSProperties;
+  style: CSSProperties | undefined;
   delay: number;
 }
 

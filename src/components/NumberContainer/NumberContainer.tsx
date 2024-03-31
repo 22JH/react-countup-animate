@@ -6,7 +6,7 @@ import { CSSProperties, useEffect, useState } from "react";
 
 export interface NumberToStinrgType {
   number: string;
-  style: CSSProperties;
+  style: CSSProperties | undefined;
   duration: number;
   startDelay: number;
   endDelay: number;

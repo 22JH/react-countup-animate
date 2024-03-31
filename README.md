@@ -34,16 +34,16 @@ export default App;
 
 # Options
 
-| Parameter                     | Type                                     | Default                        | Description                                                                                                     |
-| ----------------------------- | ---------------------------------------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| `number` (required)           | `number` or `string`                     | none                           | This is the number to display. You can use numeric or string types. The default is "1,234,567"                  |
-| `duration`(optional)          | `number`                                 | 3                              | The running time of the animation. You can enter the desired seconds in numeric type. The default is 3 seconds. |
-| `startDelay` (optional)       | `number`  or `"ease-in"` or `"ease-out"` | 0.1                            | This is the starting delay between numbers. The default is 0.1 seconds.                                         |
-| `endDelay` (optional)         | `number`  or `"ease-in"` or `"ease-out"` | 0.1                            | This is the delay before stopping between numbers. The default is 0.1 seconds.                                  |
-| `easeStartDuration`(optional) | `number`                                 | `Math.max(number.length/3, 1)` | If you select the ease-in or ease-out options, you can set the total execution time of the ease function.       |
-| `easeEndDuration`             | `number`                                 | `Math.max(number.length/3, 1)` | If you select the ease-in or ease-out options, you can set the total execution time of the ease function.       |
-| `reverse`(optional)           | `boolean`                                | false                          | This is a prop that determines whether to start from the front or the back. The default is false                |
-| `style`(optional)             | `CSSProperties`                          | none                           | You can specify css. (e.g. fontsize, fontweight, color...)                                                      |
+| Parameter                 | Type                             | Default    | Description                                                |
+| ------------------------- | -------------------------------- | ---------- | ---------------------------------------------------------- |
+| `number` (req)            | `num` or `str`                   | none       | Number to display (numeric or string)                      |
+| `duration` (opt)          | `num`                            | 3          | Animation time in seconds. Default is 3 seconds.           |
+| `startDelay` (opt)        | `num` or `ease-in` or `ease-out` | 0.1        | Start delay in seconds. Default is 0.1 seconds.            |
+| `endDelay` (opt)          | `num` or `ease-in` or `ease-out` | 0.1        | Delay before stopping in seconds. Default is 0.1 seconds.  |
+| `easeStartDuration` (opt) | `num`                            | Max(n/3,1) | Execution time of the ease function for ease-in/out.       |
+| `easeEndDuration` (opt)   | `num`                            | Max(n/3,1) | Execution time of the ease function for ease-in/out.       |
+| `reverse` (opt)           | `bool`                           | false      | Whether to start from the front or back. Default is false. |
+| `style` (opt)             | `CSSProps`                       | none       | CSS styling (e.g., fontsize, fontweight, color).           |
 
 # More Example
 
