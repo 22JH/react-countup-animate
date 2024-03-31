@@ -9,6 +9,8 @@ export interface AppProps {
   reverse?: boolean;
   startDelay?: DelayInput;
   endDelay?: DelayInput;
+  easeStartDuration?: number;
+  easeEndDuration?: number;
 }
 
 export interface NumbersProps {}

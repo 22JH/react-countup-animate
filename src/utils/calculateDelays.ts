@@ -1,26 +1,11 @@
 import { DelayInput } from "../types/types";
 
-// function calculateEaseIn(
-//   idx: number,
-//   count: number,
-//   totalDelay: number
-// ): number {
-//   return Math.pow(idx / count, 2) * totalDelay;
-// }
-
-// function calculateEaseOut(
-//   idx: number,
-//   count: number,
-//   totalDelay: number
-// ): number {
-//   return (1 - Math.pow(1 - idx / count, 2)) * totalDelay;
-// }
 function calculateEaseIn(
   idx: number,
   count: number,
   totalDelay: number
 ): number {
-  return Math.sqrt(idx / count) * totalDelay;
+  return parseFloat((Math.pow(idx / count, 3 / 2) * totalDelay).toFixed(5));
 }
 
 function calculateEaseOut(
@@ -28,8 +13,26 @@ function calculateEaseOut(
   count: number,
   totalDelay: number
 ): number {
-  return (1 - Math.sqrt(1 - idx / count)) * totalDelay;
+  return parseFloat(
+    ((1 - Math.pow(1 - idx / count, 3 / 2)) * totalDelay).toFixed(5)
+  );
 }
+// function calculateEaseIn(
+//   idx: number,
+//   count: number,
+//   totalDelay: number
+// ): number {
+//   return Math.sqrt(idx / count) * totalDelay;
+// }
+
+// function calculateEaseOut(
+//   idx: number,
+//   count: number,
+//   totalDelay: number
+// ): number {
+//   return (1 - Math.sqrt(1 - idx / count)) * totalDelay;
+// }
+
 export function calculateDelays(
   number: string[],
   startDelay: DelayInput,
@@ -40,6 +43,12 @@ export function calculateDelays(
 ): { startDelayArr: number[]; endDelayArr: number[] } {
   let startDelayArr: number[] = [];
   let endDelayArr: number[] = [];
+
+  if (number.length === 1) {
+    startDelayArr.push(0);
+    endDelayArr.push(0);
+    return { startDelayArr, endDelayArr };
+  }
 
   number.forEach((_, idx) => {
     const count = number.length;

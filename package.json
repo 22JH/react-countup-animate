@@ -1,6 +1,6 @@
 {
   "name": "react-countup-animate",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "react countup animation UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/dinex.js",
